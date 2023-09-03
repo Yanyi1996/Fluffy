@@ -35,7 +35,7 @@
             formData.append('button-number', buttonNumberInput.value);
             formData.append('email', emailInput.value);
 
-            fetch('/fluffybeta.netlify.app', {
+            fetch('https://fluffybeta.netlify.app/.netlify/functions/upload', {
                 method: 'POST',
                 body: formData
             })
