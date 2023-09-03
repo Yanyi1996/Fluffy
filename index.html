@@ -35,7 +35,10 @@
             formData.append('button-number', buttonNumberInput.value);
             formData.append('email', emailInput.value);
 
-            fetch('https://fluffybeta.netlify.app/upload', {
+            // Replace 'YOUR_SERVERLESS_FUNCTION_ENDPOINT' with the actual URL
+            const serverlessFunctionURL = 'fluffybeta.netlify.app/upload.js';
+
+            fetch(serverlessFunctionURL, {
                 method: 'POST',
                 body: formData
             })
