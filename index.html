@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Upload Picture Form</h1>
+    
     <form name="input" method="POST" data-netlify="true">
         <label for="picture">Choose a picture:</label>
         <input type="file" id="picture" name="picture" accept="image/*" required>
@@ -25,7 +26,22 @@
     </form>
 
     <input type="hidden" name="input" value="input">
-    
+
+    <form name="fileForm" enctype="multipart/form-data" data-netlify="true">
+  <p>
+    <label>
+      <span>Name:</span>
+      <input name="name" type="text"/>
+    </label>
+  </p>
+  <p>
+    <label>
+      <span>Add file:</span>
+      <input name="file" type="file"/>
+    </label>
+  </p>
+</form>
+<p class="result"></p>
 
     <script>
         document.getElementById('submit-button').addEventListener('click', function () {
